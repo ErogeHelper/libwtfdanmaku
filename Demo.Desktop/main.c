@@ -45,11 +45,12 @@ void InitializeWTF(HWND hwnd) {
                                           WTF_DANMAKU_TYPE_TOP_VISIBLE | 
                                           WTF_DANMAKU_TYPE_BOTTOM_VISIBLE);
 
-        if (hasArgFile) {
+        /*if (hasArgFile) {
             WTF_LoadBilibiliFile(wtf, optFileName);
         } else {
             WTF_LoadBilibiliFile(wtf, "E:\\Downloads\\Downloads\\1055660.xml");
-        }
+        }*/
+        WTF_AddLiveDanmaku(wtf, (int)1, 0, "sdfsdfsdfsdf", 25, (int)0xFFFFFFFF, 0, 0);
         wtfInited = true;
     }
     WTF_Start(wtf);
