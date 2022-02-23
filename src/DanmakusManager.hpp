@@ -48,7 +48,7 @@ namespace WTFDanmaku {
         bool IsVisibleDanmakuType(DanmakuRef danmaku, DanmakuConfig* config);
     private:
         struct TimeComparator {
-            bool operator() (const DanmakuRef& a, const DanmakuRef& b);
+            bool operator() (const DanmakuRef& a, const DanmakuRef& b) const;
         };
         typedef std::set<DanmakuRef, TimeComparator> TimeSortedDanmakus;
     private:
