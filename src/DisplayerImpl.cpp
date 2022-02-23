@@ -93,7 +93,10 @@ namespace WTFDanmaku {
         if (FAILED(hr))
             return hr;
 
-        mD2DFactory->GetDesktopDpi(&mDpiX, &mDpiY);
+        // Obsolete
+        //mD2DFactory->GetDesktopDpi(&mDpiX, &mDpiY);
+        mDpiX = (FLOAT)GetDpiForWindow(GetDesktopWindow());
+        mDpiY = mDpiX;
         return hr;
     }
 
